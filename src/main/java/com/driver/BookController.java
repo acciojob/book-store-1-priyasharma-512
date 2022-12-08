@@ -80,7 +80,7 @@ public class BookController {
 
 
     @GetMapping("/get-all-books")
-    public ResponseEntity getAllBooks()
+    public ResponseEntity<List<Book>> getAllBooks()
     {
         return new ResponseEntity<>(this.getBookList(), HttpStatus.CREATED);
     }
