@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("books")
+@RequestMapping("{books}")
 public class BookController {
 
     private List<Book> bookList;
@@ -54,7 +54,7 @@ public class BookController {
     }
 
     @GetMapping("/get-book-by-id/{id}")
-    public ResponseEntity<Book> getBookById(@PathVariable int id)
+    public ResponseEntity<Book> getBookById(@PathVariable String id)
     {
         Book newBook = null;
         int copy_id = Integer.parseInt(id);
