@@ -70,7 +70,7 @@ public class BookController {
     // getBookById()
 
     @DeleteMapping("/delete-book-by-id/{id}")
-    public ResponseEntity<String> deleteBookById(@PathVariable int id)
+    public ResponseEntity<String> deleteBookById(@PathVariable String id)
     {
         int copy_id = Integer.parseInt(id);
         this.bookList.removeIf(book -> book.getId() == copy_id);
