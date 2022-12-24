@@ -3,6 +3,7 @@ package com.driver;
 public class Book {
     
      private int id;
+     //primary key
 
      private String name;
 
